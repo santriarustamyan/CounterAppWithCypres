@@ -1,22 +1,22 @@
-export class CounterPage{
+export class CounterPage {
 
-    navigateCounterPage(){
+    navigateCounterPage() {
         cy.visit('http://localhost:3000/')
     }
 
-    clickPlusButton(){
+    clickPlusButton() {
         cy.get("button:nth-child(3)").click()
     }
 
-    clickMinusButton(){
+    clickMinusButton() {
         cy.get("button:nth-child(5)").click()
     }
 
-    clickResetButton(){
+    clickResetButton() {
         cy.get("button:nth-child(4)").click()
     }
 
-    assertCurrentCounterNumber(i){
-        cy.get("#app > h2").should('have.text'," "+ i +" ")
+    assertCurrentCounterNumber(i) {
+        cy.get("#app > h2").should('have.text', " " + i + " ")
     }
 }
